@@ -4,7 +4,7 @@ Subversion repositories explorer
 
 ### Repostories:
 
-![Repostories page](https://github.com/han-jingyu/SvnExplorer/blob/master/documents/reppos.png)
+![Repostories page](https://github.com/han-jingyu/SvnExplorer/blob/master/documents/repos.png)
 
 ### Summary:
 
