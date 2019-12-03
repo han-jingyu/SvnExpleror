@@ -1,0 +1,20 @@
+.navi { width: 295px; height: 32px; position: absolute; padding: 0; right: 0; background-color: #e0e0e0; }
+.navi div { padding: 0; margin: 0; bottom: 0; position: absolute; height: 33px; overflow: hidden;
+    background-color: #e0e0e0; border-width: 0; z-index: 10; }
+.navi div.backward { width: 80px; left: 0; }
+.navi div.forward { width: 80px; left: 81px; }
+.navi div.less { width: 65px; left: 162px; }
+.navi div.more { width: 65px; left: 228px; }
+.navi div:hover { overflow: visible; height: auto; }
+.navi div ul { width: 100%; padding: 0; margin: 0; list-style: none; background-color: #e0e0e0; }
+.navi div li { width: 100%; overflow: hidden; height: 32px; line-height: 32px; padding: 0; margin: 0; list-style: none;
+  background-color: #e0e0e0; border-style: solid; border-width: 1px 1px 0 1px; border-color: #c0c0c0; display: block;
+  border-bottom: 0; }
+.navi li:hover, .navi a:focus { background-color: #d0d0d0; }
+.navi li:active { background-color: #c8c8c8; }
+.navi li a { display: block; height: 32px; padding: 10px 8px 8px 26px; background-repeat: no-repeat;
+  background-clip: padding-box; background-origin: padding-box; background-size: 26px 87px;
+  background-position: 0 2px; line-height: 100%; }
+.navi li.actived a, .navi li a:hover, .navi li a:focus { background-position: 0 -27px; }
+.navi li a:active { background-position: 0 -56px; }
+.navi.filelog { right: 611px; border-right: 1px #c0c0c0 solid; }

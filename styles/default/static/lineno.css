@@ -1,0 +1,8 @@
+#file-source pre { -moz-border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px; position: relative;
+    margin-top: -4px; margin-bottom: 0; overflow: hidden; background: #ffffff; border-radius: 0 0 3px 3px; }
+code { display: block; padding: 12px 24px; overflow-y: auto; font-weight: 300; font-family: Menlo, monospace;
+  font-size: 0.8em; }
+code.has-numbering { margin-left: 36px; }
+.pre-numbering { -moz-border-radius: 0 0 0 3px; -webkit-border-radius: 0 0 0 3px; position: absolute; top: -7px;
+  left: 0; width: 32px; padding: 2px 2px 12px 0; border-right: 1px solid #c3ccd0; border-radius: 0 0 0 3px;
+  background-color: #eeeeee; text-align: right; font-family: Menlo, monospace; font-size: 0.8em; color: #aaaaaa; }
