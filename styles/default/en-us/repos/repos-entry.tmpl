@@ -1,0 +1,27 @@
+<tr class="parity{parity:}" data-repo="{label:escape}">
+  <td class="link">
+    <a href="{url:}?lang={lang:urlescape}&cmd=summary&repo={label:urlescape}"
+       class="summary" title="Repository {label:escape} summary">{label:escape}</a>
+  </td>
+  <td>{realm:escape}</td>
+  <td class="rev link right">
+    <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={label:urlescape}&rev={rev:}"
+       class="revision" title="Revision {last-rev:} information">{last-rev:}</a>
+  </td>
+  <td>{last-author:escape|noempty}</td>
+  <td data-value="{last-date:localdate|date^shorttime}">{last-date:localdate|date^shorttime}</td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=summary&repo={label:urlescape}"
+       class="summary" title="Repository {label:escape} summary">Summary</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={label:urlescape}"
+       class="files" title="Repository {label:escape} files">Files</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={label:urlescape}"
+       class="logs" title="Repository {label:escape} logs">Logs</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=edit&repo={label:urlescape}"
+       class="edit" title="Edit repository {label:escape}">Edit</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={label:urlescape}"
+       class="zip" title="Download repository {label:escape}">Download</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={label:urlescape}"
+       class="{feed:}" title="Subscribe repository {label:escape} logs">Feed</a>
+  </td>
+</tr>

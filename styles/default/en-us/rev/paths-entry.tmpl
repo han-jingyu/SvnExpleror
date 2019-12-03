@@ -1,0 +1,34 @@
+<tr class="parity{parity:}">
+  <td class="operation" data-op="{op:}">
+    <span class="path-add" data-op="{op:}">Added</span>
+    <span class="path-delete" data-op="{op:}">Deleted</span>
+    <span class="path-modify" data-op="{op:}">Modified</span>
+    <span class="path-replace" data-op="{op:}">Replaced</span>
+  </td>
+  <td class="link">
+    <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}&kind={kind:}"
+      class="{kind:}" title="Path diff">{path:escape}</a>
+  </td>
+  <td class="log-mods">
+    <span class="text {text-mods:}">T</span>
+    <span class="prop {prop-mods:}">P</span>
+  </td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="filelogs" title="File logs">Logs</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="zip" data-kind="{kind:}" title="Download folder">Download</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="raw" data-kind="{kind:}" title="Download file">Download</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="{feed:}" title="Subscrive path logs">Feed</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="files" data-kind="{kind:}" title="Files list">Files</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="filerev" data-kind="{kind:}" title="File content">File</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}&kind={kind:}"
+       class="filediff" title="Path diff">Diff</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=anno&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="blame" data-kind="{kind:}" title="File annotation">Annotation</a>
+  </td>
+</tr>

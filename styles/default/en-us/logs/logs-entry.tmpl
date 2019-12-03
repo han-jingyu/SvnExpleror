@@ -1,0 +1,50 @@
+<tr class="parity{parity:} fold-1" data-id="{rev:}">
+  <td class="fold-1" onclick="foldDetail(this, 'logs-list');">&nbsp;</td>
+  <td class="rev link right">
+    <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="revision" title="Revision {rev:} information">{rev:}</a>
+  </td>
+  <td>{author:unicode|escape}</td>
+  <td data-value="{date:localdate|date^shorttime}">{date:localdate|date^shorttime}</td>
+  <td>{messages:trim|firstline|trim|unicode|escape}<span class="tag" data-head="{head:}">Head</span></td>
+  <td class="log-op">
+    <span class="add {add:}">A</span>
+    <span class="delete {delete:}">D</span>
+    <span class="modify {modify:}">M</span>
+    <span class="replace {replace:}">R</span>
+  </td>
+  <td class="log-mods">
+    <span class="text {text-mods:}">T</span>
+    <span class="prop {prop-mods:}">P</span>
+  </td>
+  <td class="log-kind">
+    <span class="file {file:}">F</span>
+    <span class="dir {dir:}">D</span>
+  </td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="revision" title="Revision {rev:} information">Revision</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="files" title="Revision {rev:} files">Files</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="zip" title="Download revision {rev:}">Download</a>
+  </td>
+</tr>
+<tr class="detail" data-id="{rev:}" style="display: none;">
+  <td>&nbsp;</td>
+  <td colspan="8">
+    <pre>{messages:unicode|escape}</pre>
+    <table id='paths-list-{rev:}' class="bordered">
+      <thead>
+        <tr class="up" onclick="foldTable('paths-list-{rev:}');"><th colspan="4">Paths（{paths-count:}）</th></tr>
+        <tr>
+          <th class="operation" onclick="sortTable('paths-list-{rev:}', 0, 'op')">Operation</th>
+          <th class="path" onclick="sortTable('paths-list-{rev:}', 1, 'link')">Path</th>
+          <th class="mods">Modified</th>
+          <th class="actions">Actions</th>
+        </tr>
+      </thead>
+      {paths-list:}
+    </table>
+  </td>
+</tr>

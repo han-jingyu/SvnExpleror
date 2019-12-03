@@ -1,0 +1,82 @@
+{header%header}
+<a name="overview"></a>
+<table id="summary-overview" class="bordered" >
+  <thead>
+    <tr class="up" onclick="foldTable('summary-overview');"><th colspan="4">Overview</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="2">Name</th>
+      <td>{repo:escape}</td>
+      <td class="actions">
+        <a href="{url:}?lang={lang:urlescape}&cmd=edit&repo={repo:urlescape}"
+           class="edit" title="Edit repository">Edit</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={repo:urlescape}"
+           class="{feed:}" title="Subscribe repository logs">Feed</a>
+      </td>
+    </tr>
+    <tr><th colspan="2">Realm</th><td colspan="2">{repo-realm:escape}</td></tr>
+    <tr>
+      <th rowspan="3">Last changed</th>
+      <th>Revision</th>
+      <td class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&rev={repo-rev:}&repo={repo:urlescape}"
+           class="revision" title="Revision {repo-last-rev:} information">{repo-last-rev:}
+           <span class="tag">Head ({repo-rev:})</span></a>
+      </td>
+      <td class="actions">
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&rev={repo-rev:}&repo={repo:urlescape}"
+           class="files" title="Repository files">Files</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=zip&rev={repo-rev:}&repo={repo:urlescape}"
+           class="zip" title="Download repository">Download</a>
+      </td>
+    </tr>
+    <tr><th class="sub">Author</th><td colspan="2">{repo-last-author:escape}</td></tr>
+    <tr><th class="sub">Date</th><td colspan="2">{repo-last-date:localdate|date^shorttime}</td></tr>
+    <tr><th rowspan="2">Access</th><th>Anon</th><td colspan="2">{repo-anon-access:escape}</td></tr>
+    <tr><th class="sub">Auth</th><td colspan="2">{repo-auth-access:escape}</td></tr>
+    <tr><th colspan="2">UUID</th><td colspan="2">{repo-uuid:escape}</td></tr>
+    <tr><th colspan="2">Root</th><td colspan="2">{repo-remote:escape}</td></tr>
+  </tbody>
+</table>
+<br />
+<a name="logs"></a>
+<table id="logs-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('logs-list');"><th colspan="9">Logs ({logs-count:})</th></tr>
+    <tr>
+      <th class="detail">&nbsp;</th>
+      <th class="rev" onclick="sortTable('logs-list', 1, 'revision')">Revision</th>
+      <th class="author" onclick="sortTable('logs-list', 2, 'text')">Author</th>
+      <th class="date" onclick="sortTable('logs-list', 3, 'date')">Date</th>
+      <th class="message" onclick="sortTable('logs-list', 4, 'text')">Message</th>
+      <th class="op">Operation</th>
+      <th class="mods">Modified</th>
+      <th class="kind">Object</th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {logs-list#logs-entry}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th class="link" colspan="9">
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}"
+           class="logs" title="Repository logs">More...</a>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+<br data-display="{has-readme:}" />
+<a name="readme"></a>
+<table id="readme" class="bordered" data-display="{has-readme:}">
+  <thead>
+    <tr class="up" onclick="foldTable('readme');"><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td id="md-des"><pre>{readme:}</pre></td></tr>
+  </tbody>
+</table>
+<div style="display: none;" id="md-src">{readme-md:}</div>
+{footer%footer}

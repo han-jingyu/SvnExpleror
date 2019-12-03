@@ -1,0 +1,24 @@
+{header%header}
+{path-overview%path-overview}
+<br />
+<a name="logs"></a>
+<table id="logs-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('logs-list');"><th colspan="9">Logs ({logs-count:})</th></tr>
+    <tr>
+      <th class="detail">&nbsp;</th>
+      <th class="rev" onclick="sortTable('logs-list', 1, 'revision')">Revision</th>
+      <th class="author" onclick="sortTable('logs-list', 2, 'text')">Author</th>
+      <th class="date" onclick="sortTable('logs-list', 3, 'date')">Date</th>
+      <th class="message" onclick="sortTable('logs-list', 4, 'text')">Brief message</th>
+      <th class="op">Operation</th>
+      <th class="mods">Modified</th>
+      <th class="kind">Object</th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {logs-list#logs-entry}
+  </tbody>
+</table>
+{footer%footer}

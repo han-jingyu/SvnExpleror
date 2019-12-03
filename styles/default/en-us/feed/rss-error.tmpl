@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="{encoding:}"?>
+<rss version="2.0" >
+  <channel>
+    <title>Subversion repository log: {repo:escape} - {path:escape}</title>
+    <description>Revision logs of path {path:escape} in Subversion repository {repo:escape}.</description>
+    <link>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=logs&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}</link>
+    <language>en-us</language>
+    <item>
+      <title>Error</title>
+      <description>{err:escape}-{sub:escape}: {msg:addbreaks|escape}</description>
+      <author>(None)</author>
+      <pubDate>{date:localdate|date^rssdate}</pubDate>
+      <link>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=error&amp;err={err:urlescape|escape}&amp;sub={sub:urlescape|escape}&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}&amp;rev={rev:urlescape|escape}</link>
+      <guid>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=error&amp;err={err:escape}&amp;sub={sub:escape}&amp;repo={repo:escape}&amp;path={path:escape}&amp;rev={rev:escape}</guid>
+    </item>
+  </channel>
+</rss>

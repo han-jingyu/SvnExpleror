@@ -1,0 +1,32 @@
+<tr class="parity{parity:}">
+  <td class="link">
+    <a href="{url:}?lang={lang:urlescape}&cmd={kind:}&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="{kind:}" title="Path information">{name:escape}</a></td>
+  <td class="size" data-size="{size:}"><span data-kind="{kind:}">{size:sizefmt}</span></td>
+  <td class="date" data-value="{last-date:localdate|date^shorttime}" data-timestamp="{last-date:}">
+      <span data-kind="{kind:}">{last-date:localdate|date^shorttime}</span></td>
+  <td class="rev link right">
+    <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&rev={last-rev:}&path={path:urlescape}"
+       class="revision" data-kind="{kind:}" data-rev="{last-rev:}"
+       title="Revision {last-rev:} information">{last-rev:}</a>
+  </td>
+  <td class="author">{last-author:unicode|escape}</td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="filelogs" title="File logs">Logs</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="zip" data-kind="{kind:}" title="Download folder">Download</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="raw" data-kind="{kind:}" title="Download file">Download</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="{feed:}" title="Subscrive path logs">Feed</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="files" data-kind="{kind:}" title="Files list">Files</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="filerev" data-kind="{kind:}" title="File content">File</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}&kind={kind:}"
+       class="filediff" title="Path diff">Diff</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=anno&repo={repo:urlescape}&rev={rev:}&path={path:addslash|urlescape}{name:urlescape}"
+       class="blame" data-kind="{kind:}" title="File annotation">Annotation</a>
+  </td>
+</tr>

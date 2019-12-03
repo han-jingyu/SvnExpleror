@@ -1,0 +1,51 @@
+{header%header}
+{error:}
+<form method="get" action="{url:}" name="repo_form" onsubmit="return validate(this);">
+  <input type="hidden" name="cmd" value="{command:escape}" />
+  <input type="hidden" name="lang" value="{lang:escape}" />
+  <input type="hidden" name="create" value="yes" />
+  <table class="bordered" id="create-repo">
+    <thead><tr><th colspan="2">Subversion repository settings</th></tr></thead>
+    <tbody>
+      <tr>
+        <th><label for="folder">Folder:</label></th>
+        <td>
+          <select id="folder" name="folder" data-sel="{folder:escape}">
+            {repo-folders#repo-folder}
+          </select>
+        </td>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="repo">Name:</label></th>
+        <td>
+          <input type="text" name="repo" id="repo" required="required" onchange="restoreField(this);"
+                 placeholder="Name (3-30 chanacters; A-Z, a-z, 0-9, _.-)"
+                 pattern="[a-zA-Z0-9_\-\.]{3,30}" value="{repo:escape}" /> <span class="required">Required</span>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="realm">Realm:</label></th>
+        <td>
+          <input type="text" name="realm" id="realm" required="required" onchange="restoreField(this);"
+                 placeholder="Realm (3-30 chanacters; excludes ^`&%#?*{}[])"
+                 pattern="^[a-zA-Z0-9_\-\.,()\s\u4e00-\u9fa5]{3,30}$" value="{realm:escape}" />
+          <span class="required">Required</span>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="format_bdb">Format:</label></th>
+        <td id="repo-fmt-box" data-fmt="{format:escape}">
+          <span><input type="radio" name="format" value="bdb" id="fmt_bdb" />BDB</span>
+          <span><input type="radio" name="format" value="fsfs" id="fmt_fsfs" />FSFS</span>
+          <span><input type="radio" name="format" value="fsx" id="fmt_fsx" data-support="{has-fsx:}"/>FSX</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="submit"><input id="submit-repo" type="submit" value="Create" /></div>
+</form>
+<div id="error-hint" class="hidden" style="display: none;" onclick="hideErrorHint0();">
+  <p>Please check the red field value.</p>
+</div>
+{footer%footer}

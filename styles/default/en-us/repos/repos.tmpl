@@ -1,0 +1,20 @@
+{header%header}
+<table id="repos-list" class="bordered">
+  <thead>
+    <tr>
+      <th class="name sort" rowspan="2" onclick="sortTable('repos-list', 0, 'link', this)">Label</th>
+      <th class="realm sort" rowspan="2" onclick="sortTable('repos-list', 1, 'text', this)">Realm</th>
+      <th class="lastchanged" colspan="3">Last changed</th>
+      <th class="actions" rowspan="2">Actions</th>
+    </tr>
+    <tr>
+      <th class="rev sort" onclick="sortTable('repos-list', 2, 'revision', this)">Revision</th>
+      <th class="author sort" onclick="sortTable('repos-list', 3, 'text', this)">Author</th>
+      <th class="date sort" onclick="sortTable('repos-list', 4, 'date', this)">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {repos-list#repos-entry}
+  </tbody>
+</table>
+{footer%footer}

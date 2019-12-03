@@ -1,0 +1,55 @@
+<a name="overview"></a>
+<table id="path-overview" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('path-overview');"><th colspan="4">Overview</th></tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="2">Path</th>
+      <td class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path-parent:urlescape}"
+           class="logs" data-command="{command:}" title="Path logs">{path-parent:escape}</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&path={path-parent:urlescape}"
+           class="files" data-command="{command:}" title="Files list">{path-parent:escape}</a>
+        <span class="text">{path-basename:escape}</span>
+      </td>
+      <td class="actions" data-kind="{path-kind:}">
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="files" data-kind="{path-kind:}" title="Files list">Files</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="filerev" data-kind="{path-kind:}" title="File content">File</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="filelogs" data-kind="{path-kind:}" title="File logs">Logs</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}&kind={path-kind:}"
+           class="filediff" title="File diff">Diff</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=anno&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="blame" data-kind="{path-kind:}" title="File blame">Blame</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="zip" data-kind="{path-kind:}" title="Download folder">Download</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="raw" data-kind="{path-kind:}" title="Download file">Download</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=feed:&repo={repo:urlescape}&path={path:urlescape}"
+           class="{feed:}" titie="Subscribe file logs">Feed</a>
+      </td>
+    </tr>
+    <tr><th colspan="2">Revision</th>
+      <td colspan="2" class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="revision" title="Revision {rev:} information">{rev:}
+           <span class="tag" data-head="{is-head:}">Head</span></a>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="3">Last changed</th>
+      <th>Revision</th>
+      <td colspan="2" class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&path={path:urlescape}&rev={path-last-rev:}"
+           class="revision" title="Revision {path-last-rev:} information">{path-last-rev:}
+           <span class="tag" data-head="{path-last-head:}">Head</span></a>
+      </td>
+    </tr>
+    <tr><th class="sub">Author</th><td colspan="2">{path-last-author:escape}</td></tr>
+    <tr><th class="sub">Date</th><td colspan="2">{path-last-date:localdate|date^shorttime}</td></tr>
+    <tr class="size" data-kind="{path-kind:}"><th colspan="2">Size</th><td colspan="2">{file-size:sizefmt}</td></tr>
+    <tr><th colspan="2">URL</th><td colspan="2">{path-remote:}</td></tr>
+  </tbody>
+</table>
