@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="{encoding:}"?>
+<feed xmlns="http://wwww.w3.org/2005/Atom" xml:lang="en-us">
+  <title>Subversion 版本库日志：{repo:escape} - {path:escape}</title>
+  <link href="{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=logs&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}"
+        rel="alternate" />
+  <link href="{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=atom&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}" rel="self" />
+  <id>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=error&amp;err={err:urlescape|escape}&amp;msg={msg:urlescape|escape}</id>
+  <update>{date:localdate|date^xmldate}</update>
+  <generator>SvnExplorer 1.0; Subversuon: {svn-version:} ({svn-revision:}})</generator>
+  <entry>
+    <title>错误</title>
+    <link>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=error&amp;err={err:urlescape|escape}&amp;sub={sub:urlescape|escape}&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}&amp;rev={rev:urlescape|escape}</link>
+    <id>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=error&amp;err={err:escape}&amp;sub={sub:escape}&amp;repo={repo:escape}&amp;path={path:escape}&amp;rev={rev:escape}</id>
+    <author><name>（无）</name></author>
+    <updated>{date:localdate|date^xmldate}</updated>
+    <content type="text">{err:escape}-{sub:escape}: {msg:addbreaks|escape}</content>
+  </entry>
+</feed>

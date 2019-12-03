@@ -1,0 +1,23 @@
+<div class="navi">
+  <form action="{url:}" method="get">
+    <input type="hidden" name="cmd" value="diff" />
+    <input type="hidden" name="repo" value="{repo:escape}" />
+    <input type="hidden" name="path" value="{path:escape}" />
+    <input type="hidden" name="lang" value="{lang:escape}" />
+    <label for="diff-rev0">比较版本</label>
+    <input name="rev" id="diff-rev0" type="text" placeholder="First revision" pattern="([0-9]+)|(head)"
+           value="{rev:}" />
+    <label for="diff-rev1">和</label>
+    <input name="rev1" id="diff-rev1" type="text" placeholder="Second revision" pattern="([0-9]+)|(head)"
+           value="{old-rev:}" />
+    <input type="submit" id="diff-go" value="比较" />
+  </form>
+</div>
+<ul class="submenu">
+  <li>
+    <a class="summary" href="#overview" onclick="foldTable('path-overview', true);" title="路径概要">概要</a>
+  </li>
+  <li data-display="{is-source:}">
+    <a class="filediff" href="#diff" onclick="foldTable('file-diff', true);" title="比较结果">比较</a>
+  </li>
+</ul>

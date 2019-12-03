@@ -1,0 +1,34 @@
+<div class="count"><span class="title">总计：</span> {logs-count:}</div>
+<div class="navi">
+  <form action="{url:}" method="get">
+    <input type="hidden" name="cmd" value="logs" />
+    <input type="hidden" name="repo" value="{repo:escape}" />
+    <input type="hidden" name="path" value="{path:escape}" />
+    <input type="hidden" name="find" value="{find:escape}" />
+    <input type="hidden" name="lang" value="{lang:escape}" />
+    <label for="navi-rev">开始版本:</label>
+    <input name="rev" id="navi-rev" type="text" placeholder="开始版本" pattern="[0-9]+" value="{max-rev:}" />
+    <label for="navi-count">版本数:</label>
+    <input name="count" id="navi-count" type="text" placeholder="版本数" pattern="[0-9]+" value="{count:}" />
+    <input type="submit" id="navi-go" value="显示" />
+  </form>
+</div>
+<ul class="submenu">
+  <li data-head="{is-head:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={repo-rev:}&count={count:}&find={find:urlescape}"
+       class="head" title="从头版本开始显示">头版本</a></li>
+  <li data-forward-rev="{new-rev:}" data-head="{is-head:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={new-rev:}&count={count:}&find={find:urlescape}"
+       class="forward" title="显示更新的版本日志">新日志</a></li>
+  <li data-backward-rev="{old-rev:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={old-rev:}&count={count:}&find={find:urlescape}"
+       class="backward" title="显示更旧的版本日志">旧日志</a></li>
+  <li data-less-count="{count:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}&count={count-less:}&find={find:urlescape}"
+       class="less" title="显示更少的版本日志">显示更少</a></li>
+  <li data-more-count="{count:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}&count={count-more:}&find={find:urlescape}"
+       class="more" title="显示更多的版本日志">显示更多</a></li>
+  <li><a class="{path-kind:}" href="#overview" onclick="foldTable('path-overview', true);" title="概要">概要</a></li>
+  <li><a class="logs" href="#logs" onclick="foldTable('logss-list', true);" title="日志">日志</a></li>
+</ul>

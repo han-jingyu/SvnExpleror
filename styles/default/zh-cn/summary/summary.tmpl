@@ -1,0 +1,82 @@
+{header%header}
+<a name="overview"></a>
+<table id="summary-overview" class="bordered" >
+  <thead>
+    <tr class="up" onclick="foldTable('summary-overview');"><th colspan="4">概要</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="2">名称</th>
+      <td>{repo:escape}</td>
+      <td class="actions">
+        <a href="{url:}?lang={lang:urlescape}&cmd=edit&repo={repo:urlescape}"
+           class="edit" title="编辑版本库">编辑</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={repo:urlescape}"
+           class="{feed:}" title="订阅版本库日志">订阅</a>
+      </td>
+    </tr>
+    <tr><th colspan="2">认证名</th><td colspan="2">{repo-realm:escape}</td></tr>
+    <tr>
+      <th rowspan="3">最后修改</th>
+      <th>版本</th>
+      <td class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&rev={repo-rev:}&repo={repo:urlescape}"
+           class="revision" title="版本 {repo-last-rev:} 信息">{repo-last-rev:}
+           <span class="tag">版本头 ({repo-rev:})</span></a>
+      </td>
+      <td class="actions">
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&rev={repo-rev:}&repo={repo:urlescape}"
+           class="files" title="版本库文件">文件</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=zip&rev={repo-rev:}&repo={repo:urlescape}"
+           class="zip" title="下载版本库">下载</a>
+      </td>
+    </tr>
+    <tr><th class="sub">作者</th><td colspan="2">{repo-last-author:escape}</td></tr>
+    <tr><th class="sub">时间</th><td colspan="2">{repo-last-date:localdate|date^shorttime}</td></tr>
+    <tr><th rowspan="2">访问权限</th><th>匿名用户</th><td colspan="2">{repo-anon-access:escape}</td></tr>
+    <tr><th class="sub">认证用户</th><td colspan="2">{repo-auth-access:escape}</td></tr>
+    <tr><th colspan="2">版本库 UUID</th><td colspan="2">{repo-uuid:escape}</td></tr>
+    <tr><th colspan="2">版本库根路径</th><td colspan="2">{repo-remote:escape}</td></tr>
+  </tbody>
+</table>
+<br />
+<a name="logs"></a>
+<table id="logs-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('logs-list');"><th colspan="9">日志（{logs-count:}）</th></tr>
+    <tr>
+      <th class="detail">&nbsp;</th>
+      <th class="rev" onclick="sortTable('logs-list', 1, 'revision')">版本</th>
+      <th class="author" onclick="sortTable('logs-list', 2, 'text')">作者</th>
+      <th class="date" onclick="sortTable('logs-list', 3, 'date')">时间</th>
+      <th class="message" onclick="sortTable('logs-list', 4, 'text')">提交消息</th>
+      <th class="op">执行</th>
+      <th class="mods">修改</th>
+      <th class="kind">对象</th>
+      <th class="actions">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {logs-list#logs-entry}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th class="link" colspan="9">
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}"
+           class="logs" title="版本库日志">更多日志 ...</a>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+<br data-display="{has-readme:}" />
+<a name="readme"></a>
+<table id="readme" class="bordered" data-display="{has-readme:}">
+  <thead>
+    <tr class="up" onclick="foldTable('readme');"><th>简介</th></tr>
+  </thead>
+  <tbody>
+    <tr><td id="md-des"><pre>{readme:}</pre></td></tr>
+  </tbody>
+</table>
+<div style="display: none;" id="md-src">{readme-md:}</div>
+{footer%footer}

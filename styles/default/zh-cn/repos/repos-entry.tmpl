@@ -1,0 +1,27 @@
+<tr class="parity{parity:}" data-repo="{label:escape}">
+  <td class="link">
+    <a href="{url:}?lang={lang:urlescape}&cmd=summary&repo={label:urlescape}"
+       class="summary" title="版本库 {label:escape} 摘要">{label:escape}</a>
+  </td>
+  <td>{realm:escape}</td>
+  <td class="rev link right">
+    <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={label:urlescape}&rev={rev:}"
+       class="revision" title="版本 {last-rev:} 信息">{last-rev:}</a>
+  </td>
+  <td>{last-author:escape|noempty}</td>
+  <td data-value="{last-date:localdate|date^shorttime}">{last-date:localdate|date^shorttime}</td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=summary&repo={label:urlescape}"
+       class="summary" title="版本库 {label:urlescape} 摘要">摘要</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={label:urlescape}"
+       class="files" title="版本库 {label:urlescape} 文件">文件</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={label:urlescape}"
+       class="logs" title="版本库 {label:urlescape} 日志">日志</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=edit&repo={label:urlescape}"
+       class="edit" title="编辑版本库 {label:urlescape}">编辑</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={label:urlescape}"
+       class="zip" title="下载版本库 {label:urlescape}">下载</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={label:urlescape}"
+       class="{feed:}" title="订阅版本库 {label:urlescape}">订阅</a>
+  </td>
+</tr>

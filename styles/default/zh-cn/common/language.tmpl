@@ -1,0 +1,21 @@
+<div class="language">
+  <form id="language-form" method="get" action="{url:}">
+    <input type="hidden" name="cmd" value="{command:escape}" />
+    <input type="hidden" name="repo" value="{repo:escape}" />
+    <input type="hidden" name="path" value="{path:escape}" />
+    <input type="hidden" name="rev" value="{rev:escape}" />
+    <input type="hidden" name="count" value="{count:escape}" />
+    <input type="hidden" name="find" value="{find:escape}" />
+    <input type="hidden" name="rev1" value="{old-rev:escape}" />
+    <input type="hidden" name="type" value="{type:escape}" />
+    <input type="hidden" name="err" value="{err:escape}" />
+    <input type="hidden" name="sub" value="{sub:escape}" />
+    <input type="hidden" name="format" value="{format:escape}" />
+    <input type="hidden" name="folder" value="{folder:escape}" />
+    <input type="hidden" name="realm" value="{realm:escape}" />
+    <label for="language">语言：</label>
+    <select id="language" name="lang" onchange="document.getElementById('language-form').submit();">
+      {languages-list#language-item}
+    </select>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+{header%header}
+{path-overview%path-overview}
+<br />
+<a name="files"></a>
+<table id="files-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('files-list');"><th colspan="6">文件（{files-count:}）</th></tr>
+    <tr>
+      <th class="name" onclick="sortTable('files-list', 0, 'link')">名称</th>
+      <th class="size" onclick="sortTable('files-list', 1, 'size')">大小</th>
+      <th class="date" onclick="sortTable('files-list', 2, 'date')">时间</th>
+      <th class="rev" onclick="sortTable('files-list', 3, 'revision')">版本</th>
+      <th class="author" onclick="sortTable('files-list', 4, 'text')">作者</th>
+      <th class="actions">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {files-list#files-entry}
+  </tbody>
+</table>
+<br />
+{props-list%props-list}
+{footer%footer}

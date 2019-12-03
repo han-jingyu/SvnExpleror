@@ -1,0 +1,13 @@
+<a name="props"></a>
+<table id="props-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('props-list');"><th colspan="3">属性（{props-count:}）</th></tr>
+    <tr>
+      <th class="name" onclick="sortTable('props-list', 0, 'text')">属性名</th>
+      <th class="value" onclick="sortTable('props-list', 1, 'text')">属性值</th>
+    </tr>
+  </thead>
+  <tbody>
+    {props-list#props-entry}
+  </tbody>
+</table>

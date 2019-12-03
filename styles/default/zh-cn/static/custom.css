@@ -1,0 +1,13 @@
+
+/* Path-overview */
+#path-overview th { width: 60px; min-width: 60px; max-width: 60px; }
+#path-overview th[rowspan] { width: 60px; min-width: 60px; max-width: 60px; }
+
+/* Summary */
+#summary-overview th { width: 60px; min-width: 60px; max-width: 60px; }
+#summary-overview th[rowspan] { width: 60px; min-width: 60px; max-width: 60px; }
+
+/* Revision */
+#rev-overview th { width: 60px; min-width: 60px; max-width: 60px; }
+#rev-overview td.log-op span, #rev-overview td.log-mods span, #rev-overview td.log-kind span { width: 30px; }
+

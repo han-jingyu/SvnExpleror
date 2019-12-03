@@ -1,0 +1,65 @@
+{header%header}
+<a name="overview"></a>
+<table id="rev-overview" class="bordered" >
+  <thead>
+    <tr class="up" onclick="foldTable('rev-overview');"><th colspan="4">概要</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>版本</th>
+      <td>{rev:escape} <span class="tag" data-head="{rev-head:}">头版本</span></td>
+      <td class="actions">
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&rev={rev:}&repo={repo:urlescape}"
+           class="files" title="版本 {rev:} 文件">文件</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=zip&rev={rev:}&repo={repo:urlescape}"
+           class="zip" title="下载版本 {rev:}">下载</a>
+      </td>
+    </tr>
+    <tr><th>作者</th><td colspan="2">{repo-last-author:escape}</td></tr>
+    <tr><th>时间</th><td colspan="2">{repo-last-date:localdate|date^shorttime}</td></tr>
+    <tr><th>执行</th>
+      <td class="log-op" colspan="2">
+        <span class="add {add:}">添加</span>
+        <span class="delete {delete:}">删除</span>
+        <span class="modify {modify:}">修改</span>
+        <span class="replace {replace:}">替换</span>
+      </td>
+    </tr>
+    <tr><th>修改</th>
+      <td class="log-mods" colspan="2">
+        <span class="text {text-mods:}">内容</span>
+        <span class="prop {prop-mods:}">属性</span>
+      </td>
+    </tr>
+    <tr><th>对象</th>
+      <td class="log-kind" colspan="2">
+        <span class="file {file:}">文件</span>
+        <span class="dir {dir:}">目录</span>
+      </td>
+    </tr>
+    <tr><th>提交消息</th>
+      <td class="log-msg" colspan="2">
+        <pre>{rev-messages:unicode|escape}</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<a name="paths"></a>
+<table id="paths-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('paths-list');"><th colspan="4">变动路径（{paths-count:}）</th></tr>
+    <tr>
+      <th class="operation" onclick="sortTable('paths-list', 0, 'op')">变动操作</th>
+      <th class="path" onclick="sortTable('paths-list', 1, 'link')">变动路径</th>
+      <th class="mods">变动内容</th>
+      <th class="actions">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {paths-list#paths-entry}
+  </tbody>
+</table>
+<br />
+{props-list%props-list}
+{footer%footer}

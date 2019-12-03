@@ -1,0 +1,13 @@
+<entry>
+  <title>{messages:trim|firstline|trim|unicode|escape|noempty}</title>
+  <link>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=rev&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}&amp;rev={rev:}</link>
+  <id>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=rev&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}&amp;rev={rev:}</id>
+  <author><name>{author:unicode|escape}</name></author>
+  <updated>{date:localdate|date^xmldate}</updated>
+  <published>{date:localdate|date^xmldate}</published>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <pre xml:space="preserve">{messages:escape|noempty}</pre>
+    </div>
+  </content>
+</entry>

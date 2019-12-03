@@ -1,0 +1,55 @@
+<a name="overview"></a>
+<table id="path-overview" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('path-overview');"><th colspan="4">概要</th></tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="2">路径</th>
+      <td class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path-parent:urlescape}"
+           class="logs" data-command="{command:}" title="路径日志">{path-parent:escape}</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&path={path-parent:urlescape}"
+           class="files" data-command="{command:}" title="文件列表">{path-parent:escape}</a>
+        <span class="text">{path-basename:escape}</span>
+      </td>
+      <td class="actions" data-kind="{path-kind:}">
+        <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="files" data-kind="{path-kind:}" title="文件列表">文件列表</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="filerev" data-kind="{path-kind:}" title="文件内容">文件内容</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="filelogs" data-kind="{path-kind:}" title="文件日志">文件日志</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}&kind={path-kind:}"
+           class="filediff" title="文件比较">文件比较</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=anno&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="blame" data-kind="{path-kind:}" title="文件注释">文件注释</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="zip" data-kind="{path-kind:}" title="下载文件夹">下载文件</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="raw" data-kind="{path-kind:}" title="下载文件">下载文件</a>
+        <a href="{url:}?lang={lang:urlescape}&cmd=feed:&repo={repo:urlescape}&path={path:urlescape}"
+           class="{feed:}" title="订阅文件日志">订阅文件</a>
+      </td>
+    </tr>
+    <tr><th colspan="2">版本</th>
+      <td colspan="2" class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}"
+           class="revision" title="版本 {rev:} 信息">{rev:}
+           <span class="tag" data-head="{is-head:}">头版本</span></a>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="3">最后修改</th>
+      <th>版本</th>
+      <td colspan="2" class="link">
+        <a href="{url:}?lang={lang:urlescape}&cmd=rev&repo={repo:urlescape}&path={path:urlescape}&rev={path-last-rev:}"
+           class="revision" title="版本 {path-last-rev:} 信息">{path-last-rev:}
+           <span class="tag" data-head="{path-last-head:}">头版本</span></a>
+      </td>
+    </tr>
+    <tr><th class="sub">作者</th><td colspan="2">{path-last-author:escape}</td></tr>
+    <tr><th class="sub">时间</th><td colspan="2">{path-last-date:localdate|date^shorttime}</td></tr>
+    <tr class="size" data-kind="{path-kind:}"><th colspan="2">大小</th><td colspan="2">{file-size:sizefmt}</td></tr>
+    <tr><th colspan="2">路径 URL</th><td colspan="2">{path-remote:}</td></tr>
+  </tbody>
+</table>

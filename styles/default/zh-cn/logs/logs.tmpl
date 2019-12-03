@@ -1,0 +1,24 @@
+{header%header}
+{path-overview%path-overview}
+<br />
+<a name="logs"></a>
+<table id="logs-list" class="bordered">
+  <thead>
+    <tr class="up" onclick="foldTable('logs-list');"><th colspan="9">日志（{logs-count:}）</th></tr>
+    <tr>
+      <th class="detail">&nbsp;</th>
+      <th class="rev" onclick="sortTable('logs-list', 1, 'revision')">版本</th>
+      <th class="author" onclick="sortTable('logs-list', 2, 'text')">作者</th>
+      <th class="date" onclick="sortTable('logs-list', 3, 'date')">时间</th>
+      <th class="message" onclick="sortTable('logs-list', 4, 'text')">简明消息</th>
+      <th class="op">执行</th>
+      <th class="mods">修改</th>
+      <th class="kind">对象</th>
+      <th class="actions">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {logs-list#logs-entry}
+  </tbody>
+</table>
+{footer%footer}

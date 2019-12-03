@@ -1,0 +1,41 @@
+{header%header}
+{path-overview%path-overview}
+<br />
+{props-list%props-list}
+<br data-display="{is-source:}" />
+<a name="source"></a>
+<table id="file-source" class="bordered" data-display="{is-source:}">
+  <thead>
+    <tr class="up" onclick="foldTable('file-source');">
+      <th>源码</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre><ul class="pre-numbering"></ul><code class="has-numbering">{file-source:escape}</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br data-display="{is-preview:}" />
+<a name="preview"></a>
+<table id="file-preview" class="bordered" data-display="{is-preview:}">
+  <thead>
+    <tr class="up" onclick="foldTable('file-preview');">
+      <th>预览</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div data-display="{is-md:}" id="md-des"></div>
+        <div data-display="{is-svg:}">{svg:}</div>
+        <img id="source-img" src="" data-display="{is-image:}" data-svg="{is-svg:}"
+             data-src="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&path={path:urlescape}&rev={rev:}" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="display: none;" id="md-src">{md:}</div>
+{footer%footer}

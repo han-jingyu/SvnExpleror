@@ -1,0 +1,34 @@
+<tr class="parity{parity:}">
+  <td class="operation" data-op="{op:}">
+    <span class="path-add" data-op="{op:}">添加</span>
+    <span class="path-delete" data-op="{op:}">删除</span>
+    <span class="path-modify" data-op="{op:}">修改</span>
+    <span class="path-replace" data-op="{op:}">替换</span>
+  </td>
+  <td class="link">
+    <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}&kind={kind:}"
+       class="{kind:}" title="比较路径">{path:escape}</a>
+  </td>
+  <td class="log-mods">
+    <span class="text {text-mods:}">T</span>
+    <span class="prop {prop-mods:}">P</span>
+  </td>
+  <td class="actions">
+    <a href="{url:}?lang={lang:urlescape}&cmd=logs&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="filelogs" title="文件日志">文件日志</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=zip&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="zip" data-kind="{kind:}" title="下载文件夹">下载文件</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=raw&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="raw" data-kind="{kind:}" title="下载文件">下载文件</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd={feed:}&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="{feed:}" title="订阅路径日志">订阅</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=files&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="files" data-kind="{kind:}" title="文件列表">文件列表</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="filerev" data-kind="{kind:}" title="文件内容">文件内容</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=diff2&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}&kind={kind:}"
+       class="filediff" title="比较路径">比较路径</a>
+    <a href="{url:}?lang={lang:urlescape}&cmd=anno&repo={repo:urlescape}&rev={rev:}&path={path:urlescape}"
+       class="blame" data-kind="{kind:}" title="文件注释">文件注释</a>
+  </td>
+</tr>

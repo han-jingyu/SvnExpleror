@@ -1,0 +1,37 @@
+<tr class="parity{parity:} fold-1" data-id="{path:escape}" data-kind="{path-kind:}">
+  <td class="fold-1" onclick="foldDetail(this, 'file-diff');">&nbsp;</td>
+  <td class="link for-dir" data-kind="{path-kind:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=filedir&repo={repo:urlescape}&path={path-path:urlescape}/{path:urlescape}&rev={rev:}"
+       class="files" title="路径信息">{path:escape}</a></td>
+  <td class="link for-dir diff-item" data-kind="{path-kind:}"><span>新路径：</span>
+    <a href="{url:}?lang={lang:urlescape}&cmd=filedir&repo={repo:urlescape}&path={path-path:urlescape}/{new-file:urlescape}&rev={new-rev:}"
+       class="files" title="路径信息">{new-file:} @ {new-rev:}</a></td>
+  <td class="link for-dir diff-item old-dir" data-kind="{path-kind:}"><span>旧路径：</span>
+    <a href="{url:}?lang={lang:urlescape}&cmd=filedir&repo={repo:urlescape}&path={path-path:urlescape}/{old-file:urlescape}&rev={old-rev:}"
+       class="files" title="路径信息">{old-file:} @ {old-rev:}</a></td>
+  <td class="link for-file" data-kind="{path-kind:}">
+    <a href="{url:}?lang={lang:urlescape}&cmd=file&repo={repo:urlescape}&path={path-path:stripdir|urlescape}/{path:urlescape}&rev={rev:}"
+       class="file" title="路径信息">{path:escape}</a></td>
+  <td class="link for-file diff-item" data-kind="{path-kind:}"><span>新路径：</span>
+    <a href="{url:}?lang={lang:urlescape}&cmd=filedir&repo={repo:urlescape}&path={path-path:stripdir|urlescape}/{new-file:urlescape}&rev={new-rev:}"
+       class="file" title="路径信息">{new-file:} @ {new-rev:}</a></td>
+  <td class="link for-file diff-item" data-kind="{path-kind:}"><span>旧路径：</span>
+    <a href="{url:}?lang={lang:urlescape}&cmd=filedir&repo={repo:urlescape}&path={path-path:stripdir|urlescape}/{old-file:urlescape}&rev={old-rev:}"
+       class="file" title="路径信息">{old-file:} @ {old-rev:}</a></td>
+</tr>
+<tr class="detail" data-id="{path:escape}" style="display: none;">
+  <td colspan="4">
+    <table class="bordered diff-text" id="diff-text-{path-id:}" data-count="{text-count:}">
+      <thead><tr class="up" onclick="foldTable('diff-text-{path-id:}');"><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>{diff-text:}</td></tr>
+      </tbody>
+    </table>
+    <table class="bordered diff-prop" id="diff-prop-{path-id:}" data-count="{props-count:}">
+      <thead><tr class="up" onclick="foldTable('diff-prop-{path-id:}');"><th>属性</th></tr></thead>
+      <tbody>
+        <tr><td>{diff-prop:}</td></tr>
+      </tbody>
+    </table>
+  </td>
+</tr>

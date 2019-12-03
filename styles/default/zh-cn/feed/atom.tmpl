@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="{encoding:}" ?>
+<feed xmlns="http://wwww.w3.org/2005/Atom" xml:lang="en-us">
+  <title>Subversion 版本库日志：{repo:escape} - {path:escape}</title>
+  <link href="{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=logs&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}"
+        rel="alternate" />
+  <link href="{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=atom&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}" rel="self" />
+  <id>{host:}{url:}?lang={lang:urlescape|escape}&amp;cmd=logs&amp;repo={repo:urlescape|escape}&amp;path={path:urlescape|escape}&amp;rev={path-last-rev:}
+    </id>
+  <update>{path-last-date:localdate|date^xmldate}</update>
+  <generator>SvnExplorer 1.0; Subversuon: {svn-version:} ({svn-revision:}})</generator>
+  {feed-entry#atom-entry}
+</feed>
